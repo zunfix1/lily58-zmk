@@ -6,61 +6,207 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
 
 / {
+    macros {
+        HP_0: HP_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp U>;
+            label = "HP_0";
+        };
+
+        HP_1: HP_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp I>;
+            label = "HP_1";
+        };
+
+        HP_2: HP_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp O>;
+            label = "HP_3";
+        };
+
+        HP_3: HP_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp P>;
+            label = "HP_3";
+        };
+
+        TMP_1: TMP_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp S &kp N1>;
+            label = "TMP_1";
+        };
+
+        TMP_2: TMP_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp S &kp N2>;
+            label = "TMP_2";
+        };
+
+        TMP_3: TMP_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp S &kp N3>;
+            label = "TMP_3";
+        };
+
+        TMP_4: TMP_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp S &kp N4>;
+            label = "TMP_4";
+        };
+
+        TMW_NEXT: TMW_NEXT {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp S &kp LEFT_SHIFT &kp N0>;
+            label = "TMW_NEXT";
+        };
+
+        TMW_PREV: TMW_PREV {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp S &kp LEFT_SHIFT &kp N9>;
+            label = "TMW_PREV";
+        };
+
+        HYPR_JMP_1: HYPR_JMP_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_GUI &kp N1>;
+            label = "HYPR_JMP_1";
+        };
+
+        HYPR_JMP_2: HYPR_JMP_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_GUI &kp N2>;
+            label = "HYPR_JMP_2";
+        };
+
+        HYPR_JMP_3: HYPR_JMP_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_GUI &kp N3>;
+            label = "HYPR_JMP_3";
+        };
+
+        HYPR_JMP_4: HYPR_JMP_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_GUI &kp N4>;
+            label = "HYPR_JMP_4";
+        };
+
+        HYPR_SEND_1: HYPR_SEND_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_GUI &kp EXCL>;
+            label = "HYPR_SEND_1";
+        };
+
+        HYPR_SEND_2: HYPR_SEND_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_GUI &kp AT>;
+            label = "HYPR_SEND_2";
+        };
+
+        HYPR_SEND_3: HYPR_SEND_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_GUI &kp HASH>;
+            label = "HYPR_SEND_3";
+        };
+
+        HYPR_SEND_4: HYPR_SEND_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_GUI &kp DLLR>;
+            label = "HYPR_SEND_4";
+        };
+
+        TMX_C: TMX_C {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp S &kp C>;
+            label = "TMX_C";
+        };
+
+        TMX_SHIFT_C: TMX_SHIFT_C {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp C &kp LEFT_SHIFT &kp S>;
+            label = "TMX_SHIFT_C";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
-// ------------------------------------------------------------------------------------------------------------
-// |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
-// |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
-// |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-//                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
+            // ------------------------------------------------------------------------------------------------------------
+            // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
+            // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
+            // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
+            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
+            //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
+
             bindings = <
-&kp ESC    &kp N1  &kp N2 &kp N3    &kp N4   &kp N5                     &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp GRAVE
-&kp TAB    &kp Q   &kp W  &kp E     &kp R    &kp T                      &kp Y  &kp U    &kp I     &kp O   &kp P    &kp BSPC
-&kp ESC    &kp A   &kp S  &kp D     &kp F    &kp G                      &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp SQT
-&kp LSHFT  &kp Z   &kp X  &kp C     &kp V    &kp B  &kp LBKT   &kp RBKT &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-                        &kp LCTRL &kp LGUI &mo 1  &kp SPACE  &kp RET  &mo 2  &kp BSPC &kp LALT
-			>;
+&TMX_C     &TMP_1  &TMP_2  &TMP_3     &TMP_4    &TMX_SHIFT_C                         &none  &HP_0     &HP_1      &HP_2    &HP_3     &none
+&kp TAB    &kp Q   &kp W   &kp E      &kp R     &kp T                                &kp Y  &kp U     &kp I      &kp O    &kp P     &kp BSPC
+&kp ESC    &kp A   &kp S   &kp D      &kp F     &kp G                                &kp H  &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z   &kp X   &kp C      &kp V     &kp B         &kp LBKT     &kp RBKT  &kp N  &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                           &kp LCTRL  &kp LGUI  &mo 1         &kp SPACE    &kp RET   &mo 2  &kp BSPC  &kp LALT
+            >;
+
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         lower_layer {
-// ------------------------------------------------------------------------------------------------------------
-// | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
-// |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
-// |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   ~   |
-// |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
-//                     |      |      |      |        |  |       |      |       |       |
+            // ------------------------------------------------------------------------------------------------------------
+            // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
+            // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
+            // |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   ~   |
+            // |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
+            //                     |      |      |      |        |  |       |      |       |       |
+
             bindings = <
-&bt BT_CLR &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3 &bt BT_SEL 4               &none     &none     &none     &none     &none     &none
-&kp F1     &kp N1           &kp N2            &kp N3            &kp N4       &kp N5                     &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp F12
-&kp F1     &kp F2           &kp F3            &kp F4            &kp F5       &kp F6                     &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &kp RPAR  &kp TILDE
-&kp F7     &kp F8           &kp F9            &kp F10           &kp F11      &kp F12   &none   &none    &kp PSCRN &kp DEL   &none  &none     &none     &none
-                                              &none             &none        &trans    &none   &none    &none     &none    &none
+&none   &HYPR_JMP_1  &HYPR_JMP_2  &HYPR_JMP_3  &HYPR_JMP_4  &none                    &none      &none     &none   &none      &none   &none
+&none   &kp N1       &kp N2       &kp N3       &kp N4       &kp N5                   &kp N6     &kp N7    &kp N8  &kp N9     &kp N0  &none
+&kp F1  &kp F2       &kp F3       &kp F4       &kp F5       &kp F6                   &kp LEFT   &kp DOWN  &kp UP  &kp RIGHT  &none   &none
+&kp F7  &kp F8       &kp F9       &kp F10      &kp F11      &kp F12  &none    &none  &kp PSCRN  &kp DEL   &none   &none      &none   &none
+                                  &none        &none        &trans   &none    &none  &none      &none     &none
             >;
+
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         raise_layer {
-// ------------------------------------------------------------------------------------------------------------
-// |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-// |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
-// |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |      |   <-  |   v   |  ^   |  ->   |       |
-// |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   ]   |   \   |
-//                     |      |      |      |        |  |       |      |       |       |
+            // ------------------------------------------------------------------------------------------------------------
+            // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
+            // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
+            // |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |      |   <-  |   v   |  ^   |  ->   |       |
+            // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   ]   |   \   |
+            //                     |      |      |      |        |  |       |      |       |       |
+
             bindings = <
-&trans  &trans     &trans    &trans    &trans     &trans                     &none      &none      &none      &none     &none     &none
-&none   &kp EXCL   &kp AT    &kp HASH  &kp DLLR   &kp PRCNT                  &kp CARET  &kp AMPS   &kp STAR   &kp LPAR  &kp RPAR  &kp PIPE
-&none   &kp UNDER  &kp LBKT  &kp RBKT  &kp GRAVE  &kp TILDE2                 &kp PLUS   &kp MINUS  &kp EQUAL  &kp LBRC  &kp RBRC  &kp BSLH
-&none   &none      &none     &none     &none      &none       &none  &none   &none      &none      &none      &none     &none     &none
-                             &none     &none      &none       &none  &none   &trans     &none      &none
-			>;
+&trans  &HYPR_SEND_1  &HYPR_SEND_2  &HYPR_JMP_3  &HYPR_SEND_4  &trans                      &none      &none      &none      &none     &none     &none
+&none   &kp EXCL      &kp AT        &kp HASH     &kp DLLR      &kp PRCNT                   &kp CARET  &kp AMPS   &kp STAR   &kp LPAR  &kp RPAR  &kp PIPE
+&none   &kp UNDER     &kp LBKT      &kp RBKT     &kp GRAVE     &kp TILDE2                  &kp PLUS   &kp MINUS  &kp EQUAL  &kp LBRC  &kp RBRC  &kp BSLH
+&none   &none         &none         &none        &none         &none       &none    &none  &none      &none      &none      &none     &none     &none
+                                    &none        &none         &none       &none    &none  &trans     &none      &none
+            >;
+
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
