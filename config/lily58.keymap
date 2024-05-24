@@ -40,42 +40,42 @@
         TMP_1: TMP_1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp S &kp N1>;
+            bindings = <&kp LC(S) &kp N1>;
             label = "TMP_1";
         };
 
         TMP_2: TMP_2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp S &kp N2>;
+            bindings = <&kp LC(S) &kp N2>;
             label = "TMP_2";
         };
 
         TMP_3: TMP_3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp S &kp N3>;
+            bindings = <&kp LC(S) &kp N3>;
             label = "TMP_3";
         };
 
         TMP_4: TMP_4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp S &kp N4>;
+            bindings = <&kp LC(S) &kp N4>;
             label = "TMP_4";
         };
 
         TMW_NEXT: TMW_NEXT {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp S &kp LEFT_SHIFT &kp N0>;
+            bindings = <&kp LC(S) &kp LS(N0)>;
             label = "TMW_NEXT";
         };
 
         TMW_PREV: TMW_PREV {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp S &kp LEFT_SHIFT &kp N9>;
+            bindings = <&kp LC(S) &kp LS(N9)>;
             label = "TMW_PREV";
         };
 
@@ -138,14 +138,14 @@
         TMX_C: TMX_C {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp S &kp C>;
+            bindings = <&kp LC(S) &kp C>;
             label = "TMX_C";
         };
 
         TMX_SHIFT_C: TMX_SHIFT_C {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp C &kp LEFT_SHIFT &kp S>;
+            bindings = <&kp LC(S) &kp LS(C)>;
             label = "TMX_SHIFT_C";
         };
     };
