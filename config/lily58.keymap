@@ -23,11 +23,11 @@
             label = "HP_1";
         };
 
-        HP_2: HP_3 {
+        HP_2: HP_2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp SPACE &kp O>;
-            label = "HP_3";
+            label = "HP_2";
         };
 
         HP_3: HP_3 {
