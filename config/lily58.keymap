@@ -162,11 +162,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&TMX_C     &TMP_1  &TMP_2  &TMP_3     &TMP_4    &TMX_SHIFT_C                             &none  &HP_0  &HP_1      &HP_2    &HP_3     &none
-&kp TAB    &kp Q   &kp W   &kp E      &kp R     &kp T                                    &kp Y  &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp ESC    &kp A   &kp S   &kp D      &kp F     &kp G                                    &kp H  &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z   &kp X   &kp C      &kp V     &kp B         &TMX_C       &TMX_SHIFT_C  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                           &kp LCTRL  &kp LGUI  &mo 1         &kp SPACE    &kp RET       &mo 2  &none  &kp LALT
+&TMX_C     &TMP_1  &TMP_2  &TMP_3     &TMP_4    &TMX_SHIFT_C                          &none  &HP_0  &HP_1      &HP_2    &HP_3     &none
+&kp TAB    &kp Q   &kp W   &kp E      &kp R     &kp T                                 &kp Y  &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&kp ESC    &kp A   &kp S   &kp D      &kp F     &kp G                                 &kp H  &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z   &kp X   &kp C      &kp V     &kp B         &TMW_PREV    &TMW_NEXT  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                           &kp LCTRL  &kp LGUI  &mo 1         &kp SPACE    &kp RET    &mo 2  &none  &kp LALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
